@@ -1,0 +1,6 @@
+@PetApp.ReactionService_HostAddress = http://localhost:5218
+
+GET {{PetApp.ReactionService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

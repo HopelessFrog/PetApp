@@ -1,0 +1,6 @@
+@PetApp.Gateway_HostAddress = http://localhost:5008
+
+GET {{PetApp.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

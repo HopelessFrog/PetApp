@@ -1,0 +1,6 @@
+@PetApp.AuthService_HostAddress = http://localhost:5113
+
+GET {{PetApp.AuthService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
