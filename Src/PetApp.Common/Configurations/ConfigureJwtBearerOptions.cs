@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using PetApp.Common.Models;
+using PetApp.Common.Models.Options;
 
 namespace PetApp.Common.Configurations;
 

@@ -1,4 +1,4 @@
-﻿namespace PetApp.Common.Models;
+﻿namespace PetApp.Common.Models.Options;
 
 public class JwtSettings
 {

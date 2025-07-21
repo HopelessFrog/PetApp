@@ -14,7 +14,9 @@ using PetApp.Common.Extensions;
 using PetApp.Common.Middleware;
 using PetApp.Common.Models;
 using Hangfire.MemoryStorage;
+using PetApp.AuthService.Models.Options;
 using PetApp.Common.Migrations;
+using PetApp.Common.Models.Options;
 using RefreshToken = PetApp.AuthService.Models.RefreshToken;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,8 +28,12 @@ builder.Services.AddOptions<JwtSettings>()
     .ValidateDataAnnotations()
     .ValidateOnStart();
 
-builder.AddNpgsqlDbContext<AuthDbContext>("postgresdb");
+builder.Services.AddOptions<TokenCleanupOptions>()
+    .Bind(builder.Configuration.GetSection(nameof(TokenCleanupOptions)))
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
 
+builder.AddNpgsqlDbContext<AuthDbContext>("postgresdb");
 
 builder.AddRedisClient("jti-ban");
 
@@ -64,7 +70,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHangfireDashboard();
 app.ConfigureTokenCleanupJob();
 
 Singin.Map(app);

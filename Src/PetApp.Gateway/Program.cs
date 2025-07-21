@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Options;
 using PetApp.Common.Extensions;
 using PetApp.Common.Models;
+using PetApp.Common.Models.Options;
 using PetApp.Gateway.Configs;
 using PetApp.Gateway.Extensions;
 using PetApp.Gateway.Middleware;

@@ -4,6 +4,7 @@ using PetApp.AuthService.Data;
 using PetApp.AuthService.Models;
 using PetApp.AuthService.Services.Interfaces;
 using PetApp.Common.Models;
+using PetApp.Common.Models.Options;
 
 namespace PetApp.AuthService.Services;
 

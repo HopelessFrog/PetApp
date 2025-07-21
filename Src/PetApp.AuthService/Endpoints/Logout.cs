@@ -9,6 +9,7 @@ using PetApp.AuthService.Services.Interfaces;
 using PetApp.Common.Extensions;
 using PetApp.Common.Interfaces;
 using PetApp.Common.Models;
+using PetApp.Common.Models.Options;
 using PetApp.Common.Services;
 using PetApp.Common.Services.Interfaces;
 
